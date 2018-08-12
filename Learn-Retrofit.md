@@ -98,14 +98,14 @@ class DataSource{
 ![注解类型](https://github.com/liuhuan2015/LearnRetrofit/blob/master/images/zhujie-type.png)<br>
 
 注解说明：<br>
-**第一类：网络请求方法**
+**第一类：网络请求方法**<br>
+![网络请求方法](https://github.com/liuhuan2015/LearnRetrofit/blob/master/images/http-request-method.png)<br>
+
 网络请求方法有@GET，@POST，@PUT，@DELETE，@PATH，@HEAD，@OPTIONS，@HTTP八种，<br>
 
 前面七种方法分别对应Http中的网络请求方法，都接收一个网络地址Url（也可以不指定，通过@HTTP来设置）。<br>
 
 @HTTP：用于替换前面七种注解 以及 进行一些功能拓展
-
-![网络请求方法](https://github.com/liuhuan2015/LearnRetrofit/blob/master/images/http-request-method.png)<br>
 
 @HTTP的使用：<br>
 ```java
@@ -123,9 +123,22 @@ class DataSource{
 ![网络请求标记](https://github.com/liuhuan2015/LearnRetrofit/blob/master/images/http-request-flag.png)<br>
 
 标记有三种：
-* @FormUrlEncoded ：表示请求体是一个Form表单
+* @FormUrlEncoded ：表示请求体是一个Form表单<br>
+
+>作用：表示发送form-encoded的数据<br>
+>使用时每个键值对需要用@Field来注解键名，随后的对象需要提供值<br>
+
 * @Multipart ：表示请求体是一个支持文件上传的Form表单
+
+>作用：表示发送form-encoded的数据（适用于 有文件上传的场景）<br>
+>每个键值对都需要用@Part来注解键名，随后的对象需要提供值
+
 * @Streaming ：表示返回的数据以流的形式返回；适用于返回数据较大的场景；（如果没有使用该注解，默认把数据全部载入内存；之后获取数据也是从内存中读取）
+
+**第三类：网络请求参数**
+![网络请求标记](https://github.com/liuhuan2015/LearnRetrofit/blob/master/images/http-request-params.png)<br>
+
+
 
 
 
