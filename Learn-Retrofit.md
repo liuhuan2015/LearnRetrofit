@@ -29,7 +29,7 @@ Retrofit2.0学习
  
 因为其网络请求的工作本质上是由Okhttp完成的，Retrofit仅负责网络请求接口的封装,网络请求流程图如下<br>
 
-![目录](https://github.com/liuhuan2015/LearnRetrofit/blob/master/images/http-request-flow.png)<br>
+![目录](https://github.com/liuhuan2015/LearnRetrofit/blob/master/images/request-flow.png)<br>
 
 * App应用程序通过Retrofit请求网络，实际上是使用的Retrofit接口层封装请求参数、Header、Url等信息，之后由Okhttp完成后续的请求操作
 * 在服务端返回数据之后，Okhttp将原始的结果交给Retrofit，Retrofit根据用户的需求对结果进行解析
